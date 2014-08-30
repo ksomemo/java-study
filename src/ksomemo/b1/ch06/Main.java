@@ -1,37 +1,14 @@
 package ksomemo.b1.ch06;
 
-enum colors {
-    RED("aka",1),
-    GREEN("midori", 3),
-    BLUE("ao",5);
-
-    private String kana;
-    private int number;
-
-    private colors(String kana, int number) {
-        this.kana = kana;
-        this.number = number;
-    }
-
-    @Override
-    public String toString() {
-        return method();
-    }
-
-    public String method() {
-        return String.format("[%s:%s]", kana, number);
-    }
-}
-
 public class Main {
     public static void main(String[] args) {
         System.out.println("c,c.name()");
-        for (colors c : colors.values()) {
+        for (Color.colors c : Color.colors.values()) {
             System.out.println(String.format("=>%s,%s", c, c.name()));
         }
 
         final int MAX_LEN = 3;
-        if (MAX_LEN == colors.values().length) {
+        if (MAX_LEN == Color.colors.values().length) {
             System.out.println("colors's length is MAX_LEN");
         }
 

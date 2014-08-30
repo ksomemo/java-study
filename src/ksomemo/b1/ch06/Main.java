@@ -21,6 +21,6 @@ public class Main {
         System.out.println(010);
         System.out.println(0x10);
         System.out.println(5.0e3);
-        System.out.println((int)1.01);
+        System.out.println((int) 1.01);
     }
 }

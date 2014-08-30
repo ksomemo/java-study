@@ -2,10 +2,10 @@ package ksomemo.b1.ch06;
 
 public class Color {
 
-    enum colors {
-        RED("aka",1),
+    public enum colors {
+        RED("aka", 1),
         GREEN("midori", 3),
-        BLUE("ao",5);
+        BLUE("ao", 5);
 
         private String kana;
         private int number;

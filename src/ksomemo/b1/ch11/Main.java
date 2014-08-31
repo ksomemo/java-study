@@ -1,5 +1,9 @@
 package ksomemo.b1.ch11;
 
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.stream.Stream;
+
 class Main {
     public static void main(String[] args) {
         System.out.println(sum(1, 2));
@@ -17,19 +21,10 @@ class Main {
     }
 
     private static double sum(Integer... nums) {
-        double sum = 0;
-        for (double n: nums) {
-            sum += n;
-        }
-        return sum;
+        return Stream.of(nums).reduce(0, (a, b) -> (a + b));
     }
 
     private static double sum(Double... nums) {
-        double sum = 0;
-        for (double n: nums) {
-            sum += n;
-        }
-        return sum;
+        return Arrays.stream(nums).reduce(0.0, (a, b) -> (a + b));
     }
-
 }

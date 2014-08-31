@@ -1,10 +1,7 @@
 package ksomemo.b1.ch11;
 
-import com.sun.tools.javac.util.ArrayUtils;
-
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 class Main {

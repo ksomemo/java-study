@@ -1,7 +1,10 @@
 package ksomemo.b1.ch11;
 
+import com.sun.tools.javac.util.ArrayUtils;
+
 import java.util.Arrays;
-import java.util.Collection;
+import java.util.List;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 class Main {
@@ -10,6 +13,12 @@ class Main {
         System.out.println(sum(1.2, 3.4));
         System.out.println(sum(1, 2, 3));
         System.out.println(sum(1.2, 3.4, 5.6));
+
+        int[] nums = new int[]{1, 2, 3, 4};
+        System.out.println(Arrays.stream(nums).sum());
+
+        List<Integer> numList = Arrays.asList(1, 2, 3, 4);
+        numList.stream().map(n -> n * 2).forEach(System.out::print);
     }
 
     private static double sum(int a, int b) {
